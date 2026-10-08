@@ -16,7 +16,18 @@ function App() {
           <p>Property information coming soon.</p>
 
           <h3>Maintenance Requests</h3>
-          <p>Submit and track requests here soon.</p>
+          <form onSubmit={(e) => e.preventDefault()}>
+  <label htmlFor="issue">Describe the problem:</label>
+  <br />
+  <textarea
+    id="issue"
+    rows={4}
+    placeholder="Example: Kitchen sink is leaking"
+  />
+  <br />
+  <button type="submit">Submit Request</button>
+</form>
+
 
           <button onClick={signOut}>Sign out</button>
         </main>
