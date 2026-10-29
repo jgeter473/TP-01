@@ -1,8 +1,11 @@
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { fetchAuthSession } from 'aws-amplify/auth';
+
+const API_URL = 'https://lo6bk9yxr4.execute-api.us-east-2.amazonaws.com';
 
 function App() {
-  return (
+  return (a`
     <Authenticator>
       {({ signOut, user }) => (
         <main style={{ padding: '30px' }}>
