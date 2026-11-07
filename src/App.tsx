@@ -18,11 +18,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const session = await fetchAuthSession();
     const token = session.tokens?.idToken?.toString();
 
-    const response = await fetch(`${API_URL}/maintenance`, {
-      method: 'POST',
+const response = await fetch(API_URL + '/maintenance', {
+    method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ` + token,
       },
       body: JSON.stringify({ issue }),
     });
